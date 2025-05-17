@@ -49,7 +49,7 @@ title: UDP和TCP
 - 发送方将拥塞窗口作为==发送窗口swnd==，即==swnd=cwnd==
 - 维护一个慢开始门限==ssthresh==状态变量
   - 当cwnd < ssthresh时，使用慢开始算法
-  - 当cwnd < ssthresh时，停止使用慢开始算法而改用拥塞避免算法
+  - 当cwnd > ssthresh时，停止使用慢开始算法而改用拥塞避免算法
   - 当cwnd = ssthresh时，既可使用慢开始算法，也可使用拥塞避免算法
 
 #### 慢开始（slow-start）
